@@ -149,39 +149,171 @@ function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="contact-section py-5 position-relative">
+      <section 
+        className="contact-section py-5 position-relative"
+        style={{
+          background: `linear-gradient(135deg, rgba(0, 20, 60, 0.9), rgba(0, 48, 135, 0.85)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80') center/cover no-repeat fixed`,
+          minHeight: '600px',
+          display: 'flex',
+          alignItems: 'center'
+        }}
+      >
         <div className="contact-overlay"></div>
         <div className="container position-relative">
-          <div className="row justify-content-center text-center">
-            <div className="col-md-8">
-              <span className="badge bg-primary px-3 py-2 rounded-pill mb-2">Contact Us</span>
-              <h2 className="display-5 text-white fw-bold mb-4">Get In Touch With Us</h2>
-              <p className="lead text-white-50 mb-4">Have a question about a property or need expert advice? We're here to help you find your perfect home!</p>
-              <Link to="/contact" className="btn btn-primary btn-lg px-5 py-3">
-                <i className="bi bi-envelope me-2"></i>Contact Us Now
-              </Link>
-              <div className="row mt-5 g-4 justify-content-center">
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              {/* Header Section */}
+              <div className="text-center mb-5">
+                <span className="badge bg-primary bg-opacity-75 px-4 py-2 rounded-pill mb-3 d-inline-block" style={{ backdropFilter: 'blur(10px)' }}>
+                  Contact Us
+                </span>
+                <h2 className="display-4 text-white fw-bold mb-3">Get In Touch With Us</h2>
+                <p className="lead text-white mb-5" style={{ fontSize: '1.2rem', maxWidth: '700px', margin: '0 auto' }}>
+                  Have a question about a property or need expert advice? We're here to help you find your perfect home!
+                </p>
+              </div>
+
+              {/* Contact Info Cards */}
+              <div className="row g-4 mb-5">
                 <div className="col-md-4">
-                  <div className="contact-highlight text-center">
-                    <i className="bi bi-telephone display-6 text-primary mb-3"></i>
-                    <h5 className="text-white">Call Us</h5>
-                    <p className="text-white-50 mb-0">+1 (555) 123-4567</p>
+                  <div 
+                    className="contact-card h-100 text-center p-4"
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.12)',
+                      backdropFilter: 'blur(15px)',
+                      borderRadius: '20px',
+                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                      transition: 'all 0.3s ease',
+                      cursor: 'pointer'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-10px)';
+                      e.currentTarget.style.boxShadow = '0 15px 35px rgba(0, 123, 255, 0.3)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}
+                  >
+                    <div 
+                      className="mb-4 mx-auto d-flex align-items-center justify-content-center"
+                      style={{
+                        width: '80px',
+                        height: '80px',
+                        background: 'linear-gradient(135deg, rgba(0, 123, 255, 0.3), rgba(0, 86, 179, 0.3))',
+                        borderRadius: '50%',
+                        border: '2px solid rgba(255, 255, 255, 0.3)'
+                      }}
+                    >
+                      <i className="bi bi-telephone-fill text-white" style={{ fontSize: '2rem' }}></i>
+                    </div>
+                    <h4 className="text-white fw-bold mb-3">Call Us</h4>
+                    <p className="text-white-50 mb-0" style={{ fontSize: '1.1rem' }}>+1 (555) 123-4567</p>
+                    <small className="text-white-50 d-block mt-2">Mon - Fri: 9am - 6pm</small>
                   </div>
                 </div>
                 <div className="col-md-4">
-                  <div className="contact-highlight text-center">
-                    <i className="bi bi-envelope display-6 text-primary mb-3"></i>
-                    <h5 className="text-white">Email Us</h5>
-                    <p className="text-white-50 mb-0">info@househunter.com</p>
+                  <div 
+                    className="contact-card h-100 text-center p-4"
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.12)',
+                      backdropFilter: 'blur(15px)',
+                      borderRadius: '20px',
+                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                      transition: 'all 0.3s ease',
+                      cursor: 'pointer'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-10px)';
+                      e.currentTarget.style.boxShadow = '0 15px 35px rgba(0, 123, 255, 0.3)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}
+                  >
+                    <div 
+                      className="mb-4 mx-auto d-flex align-items-center justify-content-center"
+                      style={{
+                        width: '80px',
+                        height: '80px',
+                        background: 'linear-gradient(135deg, rgba(0, 123, 255, 0.3), rgba(0, 86, 179, 0.3))',
+                        borderRadius: '50%',
+                        border: '2px solid rgba(255, 255, 255, 0.3)'
+                      }}
+                    >
+                      <i className="bi bi-envelope-fill text-white" style={{ fontSize: '2rem' }}></i>
+                    </div>
+                    <h4 className="text-white fw-bold mb-3">Email Us</h4>
+                    <p className="text-white-50 mb-0" style={{ fontSize: '1.1rem' }}>info@househunter.com</p>
+                    <small className="text-white-50 d-block mt-2">We reply within 24 hours</small>
                   </div>
                 </div>
                 <div className="col-md-4">
-                  <div className="contact-highlight text-center">
-                    <i className="bi bi-geo-alt display-6 text-primary mb-3"></i>
-                    <h5 className="text-white">Visit Us</h5>
-                    <p className="text-white-50 mb-0">123 Business Avenue, NY</p>
+                  <div 
+                    className="contact-card h-100 text-center p-4"
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.12)',
+                      backdropFilter: 'blur(15px)',
+                      borderRadius: '20px',
+                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                      transition: 'all 0.3s ease',
+                      cursor: 'pointer'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-10px)';
+                      e.currentTarget.style.boxShadow = '0 15px 35px rgba(0, 123, 255, 0.3)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = 'none';
+                    }}
+                  >
+                    <div 
+                      className="mb-4 mx-auto d-flex align-items-center justify-content-center"
+                      style={{
+                        width: '80px',
+                        height: '80px',
+                        background: 'linear-gradient(135deg, rgba(0, 123, 255, 0.3), rgba(0, 86, 179, 0.3))',
+                        borderRadius: '50%',
+                        border: '2px solid rgba(255, 255, 255, 0.3)'
+                      }}
+                    >
+                      <i className="bi bi-geo-alt-fill text-white" style={{ fontSize: '2rem' }}></i>
+                    </div>
+                    <h4 className="text-white fw-bold mb-3">Visit Us</h4>
+                    <p className="text-white-50 mb-0" style={{ fontSize: '1.1rem' }}>123 Business Avenue</p>
+                    <small className="text-white-50 d-block mt-2">New York, NY 10001</small>
                   </div>
                 </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="text-center">
+                <Link 
+                  to="/contact" 
+                  className="btn btn-primary btn-lg px-5 py-3 rounded-pill"
+                  style={{
+                    background: 'linear-gradient(135deg, #007bff, #0056b3)',
+                    border: 'none',
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    letterSpacing: '1px',
+                    textTransform: 'uppercase',
+                    boxShadow: '0 10px 30px rgba(0, 123, 255, 0.4)',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-3px)';
+                    e.currentTarget.style.boxShadow = '0 15px 40px rgba(0, 123, 255, 0.6)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 123, 255, 0.4)';
+                  }}
+                >
+                  <i className="bi bi-envelope me-2"></i>Contact Us Now
+                </Link>
               </div>
             </div>
           </div>
