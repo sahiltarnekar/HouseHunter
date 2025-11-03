@@ -7,12 +7,12 @@ import './assets/css/components.css';
 // import './assets/css/sections.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import App from './App'
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
     <App />
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 )
