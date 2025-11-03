@@ -10,7 +10,7 @@ Property Card Styles
   --font-script: 'Dancing Script', cursive;
 }
 
-/* Global selection color - removed custom to revert */
+/* */
 
 /* Cursive Text Classes */
 .text-cursive {
@@ -32,7 +32,7 @@ body {
   line-height: 1.6;
 }
 
-/* Button system refresh removed to revert */
+/* */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
@@ -699,12 +699,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section Styles */
 .hero-section {
-  min-height: 85vh;
+  min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
               url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80') center/cover no-repeat;
   padding: 100px 0;
   position: relative;
-  margin-top: 5rem;
 }
 
 .hero-section::before {
@@ -717,22 +716,16 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(135deg, rgba(0, 123, 255, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%);
   mix-blend-mode: multiply;
   z-index: 1;
+  
 }
 
 .hero-section > * {
   position: relative;
   z-index: 2;
+  margin-top: 5rem;
 }
 
-.search-bar {
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
-  backdrop-filter: blur(5px);
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
-}
+
 
 .hero-section h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -746,16 +739,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto 2rem;
 }
 
-.search-bar .form-control {
-  border-radius: 0.5rem 0 0 0.5rem;
-  border: none;
-  padding: 0.8rem 1.5rem;
-}
-
-.search-bar .btn {
-  border-radius: 0 0.5rem 0.5rem 0;
-  padding: 0.8rem 2rem;
-}
+/* removed unused search-bar styles */
 
 .stat-card {
   transition: transform 0.3s ease;
@@ -775,13 +759,9 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .hero-section {
     min-height: 70vh;
-    padding: 60px 0;
+    padding: 80px 0 60px;
   }
-  
-  .search-bar {
-    padding: 0 15px;
-  }
-  
+    
   .stat-card {
     margin-bottom: 20px;
   }

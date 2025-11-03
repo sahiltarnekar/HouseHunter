@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-section position-relative d-flex align-items-center justify-content-center 5">
+      <section className="hero-section position-relative d-flex align-items-center justify-content-center">
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-10 col-xl-8 mx-auto text-center text-white px-3">
@@ -117,18 +117,19 @@ function Home() {
 
       {/* Team Section */}
       <section className="team-section py-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center mb-5">
-              <h2 className="fw-bold">Meet Our Expert Team</h2>
-              <p className="text-muted">Our professional agents are here to help you find your perfect home</p>
-            </div>
-            {teamMembers.map((member) => (
-              <TeamCard key={member.id} member={member} />
-            ))}
-          </div>
-        </div>
-      </section>
+  <div className="container">
+    <div className="row">
+      <div className="col-12 text-center mb-5">
+        <h2 className="fw-bold">Meet Our Expert Team</h2>
+        <p className="text-muted">Our professional agents are here to help you find your perfect home</p>
+      </div>
+      {teamMembers.slice(0, 3).map((member) => (
+        <TeamCard key={member.id} member={member} />
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Contact Section */}
       <section 

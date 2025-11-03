@@ -1,6 +1,42 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 
 function Header() {
+  const location = useLocation()
+
+  const closeNavbar = () => {
+    const navbarCollapse = document.getElementById('navbarSupportedContent')
+    const toggler = document.querySelector('.navbar-toggler')
+
+    // Prefer Bootstrap API if available
+    if (navbarCollapse && window.bootstrap && window.bootstrap.Collapse) {
+      try {
+        const instance = window.bootstrap.Collapse.getOrCreateInstance(navbarCollapse, { toggle: false })
+        instance.hide()
+        return
+      } catch (_) {}
+    }
+
+    // Fallback: trigger toggler click when open on mobile
+    const isOpen = navbarCollapse && navbarCollapse.classList.contains('show')
+    const isTogglerVisible = toggler && toggler.offsetParent !== null
+    if (isOpen && toggler && isTogglerVisible) {
+      toggler.click()
+      return
+    }
+
+    // Last resort: force class and aria state
+    if (isOpen) {
+      navbarCollapse.classList.remove('show')
+      if (toggler) toggler.setAttribute('aria-expanded', 'false')
+    }
+  }
+
+  useEffect(() => {
+    // Close on route change as a safety
+    closeNavbar()
+  }, [location.pathname])
+
 	return (
             <>
         <header className="fixed-top" style={{
@@ -14,6 +50,7 @@ function Header() {
               <NavLink 
                 className="navbar-brand fw-bold" 
                 to="/" 
+                onClick={closeNavbar}
                 style={{
                   fontSize: '1.5rem',
                   background: 'linear-gradient(135deg, #2c3e50, #3498db)',
@@ -37,7 +74,12 @@ function Header() {
                 <span className="navbar-toggler-icon"></span>
               </button>
 
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <div className="collapse navbar-collapse" id="navbarSupportedContent" onClick={(e) => {
+                const target = e.target
+                if (target && (target.closest('a.nav-link') || target.closest('a.btn'))) {
+                  closeNavbar()
+                }
+              }}>
                 <ul className="navbar-nav mx-auto mb-2 mb-lg-0 gap-1">
                   <li className="nav-item">
                     <NavLink 
@@ -46,6 +88,7 @@ function Header() {
                         isActive ? 'nav-link active px-3 py-2 rounded-pill fw-medium' : 'nav-link px-3 py-2 rounded-pill'
                       } 
                       end
+                      onClick={closeNavbar}
                       style={({ isActive }) => ({
                         background: isActive ? 'linear-gradient(135deg, rgba(44,62,80,0.1), rgba(52,152,219,0.1))' : '',
                         transition: 'all 0.3s ease'
@@ -60,6 +103,7 @@ function Header() {
                       className={({ isActive }) => 
                         isActive ? 'nav-link active px-3 py-2 rounded-pill fw-medium' : 'nav-link px-3 py-2 rounded-pill'
                       }
+                      onClick={closeNavbar}
                       style={({ isActive }) => ({
                         background: isActive ? 'linear-gradient(135deg, rgba(44,62,80,0.1), rgba(52,152,219,0.1))' : '',
                         transition: 'all 0.3s ease'
@@ -74,6 +118,7 @@ function Header() {
                       className={({ isActive }) => 
                         isActive ? 'nav-link active px-3 py-2 rounded-pill fw-medium' : 'nav-link px-3 py-2 rounded-pill'
                       }
+                      onClick={closeNavbar}
                       style={({ isActive }) => ({
                         background: isActive ? 'linear-gradient(135deg, rgba(44,62,80,0.1), rgba(52,152,219,0.1))' : '',
                         transition: 'all 0.3s ease'
@@ -88,6 +133,7 @@ function Header() {
                       className={({ isActive }) => 
                         isActive ? 'nav-link active px-3 py-2 rounded-pill fw-medium' : 'nav-link px-3 py-2 rounded-pill'
                       }
+                      onClick={closeNavbar}
                       style={({ isActive }) => ({
                         background: isActive ? 'linear-gradient(135deg, rgba(44,62,80,0.1), rgba(52,152,219,0.1))' : '',
                         transition: 'all 0.3s ease'
@@ -102,6 +148,7 @@ function Header() {
                       className={({ isActive }) => 
                         isActive ? 'nav-link active px-3 py-2 rounded-pill fw-medium' : 'nav-link px-3 py-2 rounded-pill'
                       }
+                      onClick={closeNavbar}
                       style={({ isActive }) => ({
                         background: isActive ? 'linear-gradient(135deg, rgba(44,62,80,0.1), rgba(52,152,219,0.1))' : '',
                         transition: 'all 0.3s ease'
@@ -114,6 +161,7 @@ function Header() {
                 <NavLink 
                   to="/list-property" 
                   className="btn px-4 py-2"
+                  onClick={closeNavbar}
                   style={{
                     background: 'linear-gradient(135deg, #2c3e50, #3498db)',
                     color: 'white',
