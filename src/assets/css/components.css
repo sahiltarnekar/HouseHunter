@@ -10,6 +10,8 @@ Property Card Styles
   --font-script: 'Dancing Script', cursive;
 }
 
+/* Global selection color - removed custom to revert */
+
 /* Cursive Text Classes */
 .text-cursive {
   font-family: var(--font-cursive);
@@ -29,6 +31,8 @@ body {
   font-weight: 400;
   line-height: 1.6;
 }
+
+/* Button system refresh removed to revert */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
@@ -700,6 +704,7 @@ h1, h2, h3, h4, h5, h6 {
               url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80') center/cover no-repeat;
   padding: 100px 0;
   position: relative;
+  margin-top: 5rem;
 }
 
 .hero-section::before {

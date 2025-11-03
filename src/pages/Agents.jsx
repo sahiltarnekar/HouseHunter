@@ -126,7 +126,7 @@ function Agents() {
                         );
                       })}
                     </div>
-                    <Link to={`/agent/${agent.id}`} className="btn btn-primary w-100 mt-3">
+                    <Link to={`/agents/${agent.id}`} className="btn btn-primary w-100 mt-3">
                       View Profile
                     </Link>
                   </div>

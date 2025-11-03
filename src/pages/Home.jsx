@@ -6,40 +6,22 @@ import { testimonials, properties, teamMembers } from '../utils/data'
 
 
 function Home() {
-  const [searchQuery, setSearchQuery] = useState('')
-
-  const handleSearch = (e) => {
-    e.preventDefault()
-    // Handle search functionality
-    console.log('Searching for:', searchQuery)
-  }
+  // No hero filters; simple call-to-action hero
 
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-section position-relative d-flex align-items-center justify-content-center">
+      <section className="hero-section position-relative d-flex align-items-center justify-content-center 5">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8 mx-auto text-center text-white">
-              <h1 className="display-4 fw-bold mb-4 text-uppercase">Find Your Dream Home</h1>
-              <p className="lead mb-5">Discover the perfect property from our extensive collection of homes, apartments, and luxury estates.</p>
-              
-              {/* Search Bar */}
-              <form onSubmit={handleSearch} className="search-bar mb-5">
-                <div className="input-group">
-                  <input
-                    type="text"
-                    className="form-control form-control-lg"
-                    placeholder="Enter location, property type, or keywords..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  />
-                  <button className="btn btn-primary btn-lg" type="submit">
-                    <i className="fa fa-search"></i> Search
-                  </button>
-                </div>
-              </form>
-
+            <div className="col-12 col-lg-10 col-xl-8 mx-auto text-center text-white px-3">
+              <h1 className="fw-bold mb-3 text-uppercase fs-3 fs-md-2 fs-lg-1">Find Your Dream Home</h1>
+              <p className="lead mb-4 fs-6 fs-md-5">Discover curated homes, apartments, and luxury estates in top locations.</p>
+              <div className="d-flex justify-content-center mb-4">
+                <Link to="/properties" className="btn btn-primary btn-lg px-4 py-2">
+                  Browse Properties
+                </Link>
+              </div>
               {/* Quick Stats */}
               <div className="row g-4">
                 <div className="col-md-4">

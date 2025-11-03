@@ -31,7 +31,7 @@ export default function TeamCard({ member }) {
               )
             ))}
           </div>
-          <Link to={`/agent/${member.id}`} className="btn btn-primary">View Profile</Link>
+          <Link to={`/agents/${member.id}`} className="btn btn-primary">View Profile</Link>
         </div>
       </div>
     </div>

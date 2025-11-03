@@ -35,7 +35,7 @@ const PropertyCard = ({ property }) => {
               ))}
             </div>
           </div>
-          <Link to={`/property/${property.id}`} className="btn btn-primary w-100">
+          <Link to={`/properties/${property.id}`} className="btn btn-primary w-100">
             View Details
           </Link>
         </div>

@@ -123,8 +123,102 @@ export const teamMembers = [
       facebook: "#"
     }
   },
-  
-   
+  {
+    id: 4,
+    name: "Ava Martinez",
+    role: "Residential Specialist",
+    image: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=1000&auto=format&fit=crop",
+    experience: "6+ years",
+    properties: "120+ deals",
+    socials: {
+      phone: "+1 (555) 456-7890",
+      email: "ava.martinez@househunter.com",
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+      facebook: "#"
+    }
+  },
+  {
+    id: 5,
+    name: "Liam Patel",
+    role: "Commercial Property Advisor",
+    image: "https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=1000&auto=format&fit=crop",
+    experience: "9+ years",
+    properties: "210+ deals",
+    socials: {
+      phone: "+1 (555) 567-8901",
+      email: "liam.patel@househunter.com",
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+      facebook: "#"
+    }
+  },
+  {
+    id: 6,
+    name: "Olivia Nguyen",
+    role: "Luxury Property Specialist",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop",
+    experience: "7+ years",
+    properties: "160+ deals",
+    socials: {
+      phone: "+1 (555) 678-9012",
+      email: "olivia.nguyen@househunter.com",
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+      facebook: "#"
+    }
+  },
+  {
+    id: 7,
+    name: "Noah Thompson",
+    role: "Rental Market Expert",
+    image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=1000&auto=format&fit=crop",
+    experience: "5+ years",
+    properties: "300+ leases",
+    socials: {
+      phone: "+1 (555) 789-0123",
+      email: "noah.thompson@househunter.com",
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+      facebook: "#"
+    }
+  },
+  {
+    id: 8,
+    name: "Michael Chen",
+    role: "Commercial Real Estate Expert",
+    image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
+    experience: "12+ years",
+    properties: "300+ deals",
+    socials: {
+      phone: "+1 (555) 345-6789",
+      email: "michael.chen@househunter.com",
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+      facebook: "#"
+    }
+  },
+  {
+    id: 9,
+    name: "Olivia Nguyen",
+    role: "Luxury Property Specialist",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop",
+    experience: "7+ years",
+    properties: "160+ deals",
+    socials: {
+      phone: "+1 (555) 678-9012",
+      email: "olivia.nguyen@househunter.com",
+      linkedin: "#",
+      twitter: "#",
+      instagram: "#",
+      facebook: "#"
+    }
+  }
   
 ];
 
