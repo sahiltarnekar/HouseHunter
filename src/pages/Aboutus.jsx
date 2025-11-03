@@ -1,5 +1,5 @@
 import { teamMembers } from '../utils/data'
-
+import TeamCard from '../utils/TeamCard'
 function Aboutus() {
   return (
     <>
@@ -134,30 +134,8 @@ function Aboutus() {
             </div>
           </div>
           <div className="row g-4">
-            {teamMembers.map((member) => (
-              <div key={member.id} className="col-md-6 col-lg-4">
-                <div className="team-card text-center p-4 rounded-3 bg-white shadow-sm">
-                  <div className="card-img-wrapper mx-auto rounded-circle overflow-hidden mb-4">
-                    <img src={member.image} alt={member.name} className="team-member-img" />
-                  </div>
-                  <h4 className="fw-bold mb-1">{member.name}</h4>
-                  <p className="text-primary mb-2">{member.role}</p>
-                  <p className="text-muted small mb-3">
-                    {member.experience} Experience • {member.properties}
-                  </p>
-                  <div className="social-links">
-                    <a href={member.socials.linkedin} className="btn btn-light btn-sm me-2">
-                      <i className="bi bi-linkedin"></i>
-                    </a>
-                    <a href={member.socials.twitter} className="btn btn-light btn-sm me-2">
-                      <i className="bi bi-twitter"></i>
-                    </a>
-                    <a href={member.socials.instagram} className="btn btn-light btn-sm">
-                      <i className="bi bi-instagram"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
+          {teamMembers.slice(0, 3).map((member) => (
+        <TeamCard key={member.id} member={member} />
             ))}
           </div>
         </div>
